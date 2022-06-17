@@ -1,0 +1,101 @@
+{
+  "kind": "collectionType",
+  "collectionName": "shops",
+  "info": {
+    "singularName": "shop",
+    "pluralName": "shops",
+    "displayName": "Shop"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "shop_name": {
+      "type": "string",
+      "required": true
+    },
+    "shop_email": {
+      "type": "email",
+      "required": false
+    },
+    "shop_whatsapp": {
+      "type": "string"
+    },
+    "address": {
+      "type": "text",
+      "required": true
+    },
+    "shop_opening_hours": {
+      "type": "time"
+    },
+    "shop_closing_hours": {
+      "type": "time"
+    },
+    "shop_account_instagram": {
+      "type": "string"
+    },
+    "shop_image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "kelurahan": {
+      "type": "string",
+      "required": true
+    },
+    "kecamatan": {
+      "type": "string",
+      "required": true
+    },
+    "kota": {
+      "type": "string",
+      "required": true
+    },
+    "kode_pos": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "shop_name",
+      "required": true
+    },
+    "provinsi": {
+      "type": "string",
+      "required": true
+    },
+    "pengiriman_luar_kota": {
+      "type": "boolean"
+    },
+    "shop_status": {
+      "type": "boolean",
+      "required": true
+    },
+    "shop_description": {
+      "type": "text"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category.category",
+      "mappedBy": "shops"
+    },
+    "products": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product.product",
+      "mappedBy": "shop"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "shop"
+    }
+  }
+}

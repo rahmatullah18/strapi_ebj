@@ -1,5 +1,4 @@
 module.exports = ({ env }) => ({
-  // ...
   upload: {
     config: {
       provider: 'cloudinary',
@@ -15,5 +14,11 @@ module.exports = ({ env }) => ({
       },
     },
   },
-  // ...
+  "import-export-entries": {
+    enabled: true,
+  },
+  // enable Awesome Help
+  "awesome-help": {
+    enabled: true,
+  }
 });
