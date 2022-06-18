@@ -76,6 +76,11 @@
       "relation": "manyToOne",
       "target": "api::booking.booking",
       "inversedBy": "products"
+    },
+    "product_status": {
+      "type": "boolean",
+      "default": true,
+      "required": true
     }
   }
 }
