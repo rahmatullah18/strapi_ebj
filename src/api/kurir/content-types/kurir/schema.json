@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "kurirs",
+  "info": {
+    "singularName": "kurir",
+    "pluralName": "kurirs",
+    "displayName": "kurir"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nama_lengkap": {
+      "type": "string"
+    },
+    "alamat": {
+      "type": "text"
+    },
+    "jenis_kelamin": {
+      "type": "enumeration",
+      "enum": [
+        "laki-laki",
+        "perempuan"
+      ]
+    },
+    "nomor_whatsapp": {
+      "type": "string"
+    },
+    "sim": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "ktp": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
