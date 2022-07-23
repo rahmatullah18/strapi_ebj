@@ -103,6 +103,12 @@
       "type": "string",
       "required": false,
       "unique": true
+    },
+    "nama_bank": {
+      "type": "string"
+    },
+    "nama_pemilik_rekening": {
+      "type": "string"
     }
   }
 }
