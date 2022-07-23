@@ -4,7 +4,8 @@
   "info": {
     "singularName": "shop",
     "pluralName": "shops",
-    "displayName": "Shop"
+    "displayName": "Shop",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -36,14 +37,15 @@
       "type": "string"
     },
     "shop_image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     },
     "kelurahan": {
       "type": "string",
@@ -96,6 +98,11 @@
       "relation": "oneToOne",
       "target": "plugin::users-permissions.user",
       "mappedBy": "shop"
+    },
+    "nomor_rekening": {
+      "type": "string",
+      "required": false,
+      "unique": true
     }
   }
 }
