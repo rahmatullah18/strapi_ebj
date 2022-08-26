@@ -31,11 +31,6 @@
         "audios"
       ]
     },
-    "slug": {
-      "type": "uid",
-      "targetField": "product_name",
-      "required": true
-    },
     "product_description": {
       "type": "richtext",
       "required": true
@@ -81,6 +76,9 @@
       "type": "boolean",
       "default": true,
       "required": true
+    },
+    "slug": {
+      "type": "string"
     }
   }
 }
