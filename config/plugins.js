@@ -30,6 +30,7 @@ module.exports = ({ env }) => ({
           uid: "api::shop.shop",
           modelName: "shop",
           queryConstraints: {
+            populate: true,
             where: {
               $and: [
                 {
