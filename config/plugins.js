@@ -30,7 +30,7 @@ module.exports = ({ env }) => ({
           uid: "api::shop.shop",
           modelName: "shop",
           queryConstraints: {
-            populate: true,
+            populate: ['categories', 'shop_image'],
             where: {
               $and: [
                 {
@@ -82,6 +82,35 @@ module.exports = ({ env }) => ({
               },
               {
                 name: "description",
+                weight: 100,
+              },
+            ],
+          },
+        },
+        {
+          uid: "api::product.product",
+          modelName: "product",
+          queryConstraints: {
+            populate: ['product_image', 'shop'],
+            where: {
+              $and: [
+                {
+                  publishedAt: { $notNull: true },
+                },
+              ],
+            },
+          },
+          fuzzysortOptions: {
+            characterLimit: 300,
+            threshold: -600,
+            limit: 10,
+            keys: [
+              {
+                name: "product_name",
+                weight: 100,
+              },
+              {
+                name: "product_description",
                 weight: 100,
               },
             ],
