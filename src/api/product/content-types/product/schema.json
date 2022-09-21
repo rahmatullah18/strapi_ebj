@@ -79,6 +79,9 @@
     },
     "slug": {
       "type": "string"
+    },
+    "stock": {
+      "type": "integer"
     }
   }
 }
